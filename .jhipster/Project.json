@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20231219041529"
+  },
+  "applications": ["playground"],
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "name": "Project",
+  "relationships": [],
+  "searchEngine": "no"
+}

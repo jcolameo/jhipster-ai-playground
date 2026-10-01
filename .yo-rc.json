@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "playground",
+    "buildTool": "maven",
+    "cacheProvider": "no",
+    "clientFramework": "angular",
+    "creationTimestamp": 1702959269939,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": false,
+    "enableTranslation": false,
+    "entities": ["Project"],
+    "jhipsterVersion": "9.4.0",
+    "jwtSecretKey": "NmVhOTU0Y2E3MWYwMzJmZDAyZjMxNGJmN2NjOTQxYWQ4ODY5Y2E5OTUxMmNmMmJmODAyNzgwMzE1OWNmYzMyNTgxMWI0OTEyODRlMDEwMjFiNWQwZWQwYWIxYTc3ZDkyNTUxYTE0NzgxODMwZjgyNGM3YmRiMTA1OGQxZWU2OGE=",
+    "lastLiquibaseTimestamp": 1702959329000,
+    "nativeLanguage": "en",
+    "packageName": "com.example.playground",
+    "prodDatabaseType": "postgresql",
+    "serverPort": "8080",
+    "skipCommitHook": true,
+    "testFrameworks": []
+  }
+}
