@@ -1,0 +1,44 @@
+// E0 – minimale Baseline-Anwendung (siehe docs/decisions/05-experimente.md)
+// Generator-Input: Diese Datei ist die Quelle der Wahrheit für die generierten Teile.
+// Grundsatz: JHipster-Default, außer es gibt einen konkreten E0-Grund für eine Abweichung.
+
+application {
+  config {
+    baseName playground
+    applicationType monolith
+    packageName com.example.playground
+    buildTool maven
+    serverPort 8080
+
+    // Security-relevant: JHipster-Default, für E0 bewusst unverändert übernommen
+    authenticationType jwt
+
+    // Default (Angular) als Baseline – keine Festlegung für die spätere Website (F-14)
+    clientFramework angular
+
+    // Abweichung: Dev-DB H2 statt PostgreSQL, weil E0 ohne Docker laufen soll.
+    // Prod bleibt Default PostgreSQL; Tests laufen dadurch im Profil "testdev" gegen H2.
+    databaseType sql
+    prodDatabaseType postgresql
+    devDatabaseType h2Disk
+
+    // Abweichung: kein Cache (Default wäre Ehcache + Hibernate 2nd-Level-Cache).
+    // Für E0 nicht nötig, spart Dependencies und Konfiguration.
+    cacheProvider no
+    enableHibernateCache false
+
+    // Abweichung: keine i18n (Default wäre an). Für E0 nicht nötig.
+    enableTranslation false
+    nativeLanguage en
+
+    // Default: keine zusätzlichen Testframeworks (kein Cypress/Gatling/Cucumber)
+    testFrameworks []
+  }
+  entities Project
+}
+
+// Bewusst ohne Relations, Media, Pagination, DTO und Service-Klasse (alles JHipster-Default).
+entity Project {
+  name String required
+  description TextBlob
+}
